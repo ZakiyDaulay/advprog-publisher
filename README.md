@@ -107,5 +107,6 @@ If we only used model, the code will become more complicated to manage because i
 
 3. Have you explored more about Postman? Tell us how this tool helps you to test your current work. You might want to also list which features in Postman you are interested in or feel like it is helpful to help your Group Project or any of your future software engineering projects.
 
-Postman can help test the endpoint without writing any code in the frontend. We can use the app to send JSon request and check the responses. We can also organize endpoints with the collections feature and switch between setups using the environment variables. Postman is also especially useful for collaborative works because it ensures that every member is testsing the same API. 
+Postman can help test the endpoint without writing any code in the frontend. We can use the app to send JSon request and check the responses. We can also organize endpoints with the collections feature and switch between setups using the environment variables. Postman is also especially useful for collaborative works because it ensures that every member is testsing the same API.
+
 #### Reflection Publisher-3
