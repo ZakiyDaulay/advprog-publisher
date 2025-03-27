@@ -97,5 +97,15 @@ multiple threads to read and write without additional synchronization mechanisms
 
 
 #### Reflection Publisher-2
+1. Why do we need to separate “Service” and “Repository” from a Model?
 
+The separation of service and repository adheres to the single responsibility principle. The service will handle the business logic and the repository focuses on data access and storage. This makes the system more modular and easier to test and maintain. 
+
+2. What happens if we only use the Model? Explain your imagination on how the interactions between each model (Program, Subscriber, Notification) affect the code complexity for each model?
+
+If we only used model, the code will become more complicated to manage because it will be harder to separate the concerns. Using only the model, would mean that it would have the handle databse accesss and business logic all at once which would definitely increase the chances of bugs. 
+
+3. Have you explored more about Postman? Tell us how this tool helps you to test your current work. You might want to also list which features in Postman you are interested in or feel like it is helpful to help your Group Project or any of your future software engineering projects.
+
+Postman can help test the endpoint without writing any code in the frontend. We can use the app to send JSon request and check the responses. We can also organize endpoints with the collections feature and switch between setups using the environment variables. Postman is also especially useful for collaborative works because it ensures that every member is testsing the same API. 
 #### Reflection Publisher-3
