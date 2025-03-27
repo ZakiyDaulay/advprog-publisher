@@ -77,6 +77,24 @@ This is the place for you to write reflections:
 ### Mandatory (Publisher) Reflections
 
 #### Reflection Publisher-1
+1. Do we still need an interface (or trait in Rust) in this BambangShop case, or a single Model struct is enough?
+
+Right now, using a single struct will be fine if all the subscribers behave the same way (receiving notifications via HTTP POST requests).
+But in the long term, implementing a trait can be beneficial because the Observer Pattern promotes decoupling between the publisher and the subscribers.
+Defining a trait will also make the publisher only depend on an abstraction rather than the subscriber implementations, which keeps the system open for future extensions
+
+
+2. Explain based on your understanding, is using Vec (list) sufficient or using DashMap (map/dictionary) like we currently use is necessary for this case?
+
+Using dashmap is more fitting because it allows efficient read and write access across threads, and provides fast lookup s and ensure uniqueness of keys.
+Using a Vec would be sufficient for this application, if the application is single threaded. A vec would also require manual iteration to check for duplicates which is inefficient.
+
+3. Do we still need DashMap or we can implement Singleton pattern instead?
+
+Implementing a Singleton pattern will ensure a single instance of a structure globally, but it doesn't guarantee thread safety on its own. While Dashmap is designed to allow thread-safe operations, which allows
+multiple threads to read and write without additional synchronization mechanisms.Therefore, Dashmap is still necessary for thread safety while singleton will manage global access for that dashmap instance.
+
+
 
 #### Reflection Publisher-2
 
