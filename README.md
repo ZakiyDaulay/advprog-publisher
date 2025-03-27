@@ -110,3 +110,14 @@ If we only used model, the code will become more complicated to manage because i
 Postman can help test the endpoint without writing any code in the frontend. We can use the app to send JSon request and check the responses. We can also organize endpoints with the collections feature and switch between setups using the environment variables. Postman is also especially useful for collaborative works because it ensures that every member is testsing the same API.
 
 #### Reflection Publisher-3
+1. Observer Pattern has two variations: Push model (publisher pushes data to subscribers) and Pull model (subscribers pull data from publisher). In this tutorial case, which variation of Observer Pattern that we use?
+
+We used the push model of the observer pattern. The publihser pushes notifications to each subscriber by sending HTTP POST request whenever an event like product creation, deleteion, promotion occurs. 
+
+2. What are the advantages and disadvantages of using the other variation of Observer Pattern for this tutorial case? (example: if you answer Q1 with Push, then imagine if we used Pull)
+
+Using the pull model would mean that every subscriber would have to regularly request data from the publisher instead of the publisher sending out the notification to each subscriber. The advnatage would be the subscribers would have more control and would reduce unnecessary data transfer. But using pull would make it more complicated for subscibr as we would have to implement the logic of periodicaly pulling from the publisher. 
+
+3. Explain what will happen to the program if we decide to not use multi-threading in the notification process.
+
+If we don't use multi-threading, a couple of things will happen. The program will notify each subscriber seqeuntially, which if there are a lot of them it would slow down the system. The thread would also be blocked while the notifications are being sent which would also delay and slow down the system. Using multi-threading allows the program to send notifications concurrently which improves the overall performance. 
